@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/button_capture"
+        android:background="#1E88E5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"/>
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:visibility="gone"
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_action_done"/>
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/retake"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="32dp"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_av_replay"/>
+
+</RelativeLayout>

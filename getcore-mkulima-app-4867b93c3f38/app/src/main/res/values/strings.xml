@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Mkulima</string>
+
+    <string name="hello_world">Farmers List</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_farmer_button">Register farmer</string>
+    <string name="farmer_gender">Gender</string>
+    <string name="gender_male">Mme</string>
+    <string name="gender_female">Mke</string>
+    <string name="id_type">ID Type</string>
+    <string name="driver_licence">Udereva</string>
+    <string name="voter">Kura</string>
+    <string name="national_id">Taifa</string>
+    <string name="phone_example">Phone Number (2557********|)</string>
+    <string name="id_number">Identification Number</string>
+    <string name="acres">Land in acres</string>
+    <string name="seeds">Seeds</string>
+    <string name="pesticide">Pesticides</string>
+    <string name="sprayers">Sprayers</string>
+    <string name="fertilizers">Fertilizers</string>
+    <string name="cotton">Cotton</string>
+    <string name="comments">Comments ...</string>
+    <string name="submit">Submit</string>
+    <string name="farmers">Farmers</string>
+    <string name="add_farmer">Add Farmer</string>
+    <string name="full_name">Full Name</string>
+    <string name="upload">Upload</string>
+    <string name="district">District</string>
+    <string name="hint_district">Enter district ...</string>
+    <string name="hint_division">Enter Division</string>
+    <string name="text_division">Division</string>
+    <string name="text_ward">Ward</string>
+    <string name="hint_ward">Enter Ward here..</string>
+    <string name="text_village">Village</string>
+    <string name="hint_village">Enter Village here..</string>
+    <string name="text_hamlet">Hamlet</string>
+    <string name="district_prompt"> District </string>
+    <string name="ward_prompt"> Ward </string>
+    <string name="village_prompt"> Village </string>
+</resources>

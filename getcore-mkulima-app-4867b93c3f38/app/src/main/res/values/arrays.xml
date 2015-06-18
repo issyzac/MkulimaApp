@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list">
+        <item>Wakulima</item>
+        <item>Sajili Mkulima</item>
+        <item>Pakia</item>
+        <item>Eneo</item>
+    </string-array>
+
+    <string-array name="districts">
+        <item>Masumbuko</item>
+        <item>Sengerema</item>
+        <item>Mahita</item>
+    </string-array>
+
+    <string-array name="ward">
+        <item>Mutike</item>
+        <item>Melo</item>
+        <item>Kiluvya</item>
+    </string-array>
+
+    <string-array name="village">
+        <item>Mchinwa</item>
+        <item>Kibungiso</item>
+        <item>Bandari</item>
+    </string-array>
+
+</resources>

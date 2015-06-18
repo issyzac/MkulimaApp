@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_image_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="..." />
+
+    <ImageView
+        android:layout_width= "match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/iv_farmer"
+        android:background="@color/grey_100"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/add_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/camera"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green_700"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="Piga picha hapa"/>
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Ingiza Taarifa"
+        android:layout_below="@id/iv_farmer"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_400"
+        android:id="@+id/title_strip"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        android:layout_below="@id/title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/full_name_title"
+        android:layout_below="@id/title_strip"
+        android:layout_marginTop="16dp"
+        android:text="Jina Kamili "
+        android:textSize="18sp"
+        android:layout_marginLeft="8dp"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_below="@id/title_strip"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender_title"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:text="Jinsia"/>
+
+    <RadioGroup
+        android:id="@+id/radio_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/gender_title"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/gender_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/gender_male"
+            android:layout_marginLeft="@dimen/breathing"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/gender_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/gender_female"
+            android:layout_marginLeft="@dimen/breathing"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_id_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kitambulisho  "
+        android:textSize="18sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/radio_gender"/>
+
+    <RadioGroup
+        android:id="@+id/radio_id_type"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/radio_gender"
+        android:layout_toRightOf="@id/tv_id_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/license"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/driver_licence"
+            android:layout_marginLeft="16dp"/>
+
+        <RadioButton
+            android:id="@+id/voters"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/voter"
+            android:layout_marginLeft="16dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/national_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/national_id"
+            android:layout_marginLeft="16dp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_number_title"
+        android:layout_below="@id/radio_id_type"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:text="# Kitambulisho "/>
+
+    <EditText
+        android:id="@+id/id_number"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/radio_id_type"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_title"
+        android:textSize="18sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/id_number"
+        android:text="Simu    "/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/id_number"
+        android:inputType="phone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acres_title"
+        android:textSize="18sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/phone"
+        android:text="Ekari      "/>
+
+    <EditText
+        android:id="@+id/acres"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/phone"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:inputType="numberSigned"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seeds_title"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:layout_below="@id/acres"
+        android:text="Mbegu(kilo)    "/>
+
+    <EditText
+        android:id="@+id/seeds"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/acres"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:id="@+id/pesticide_title"
+        android:layout_below="@id/seeds"
+        android:text="Dawa(Chupa)  "/>
+
+    <EditText
+        android:id="@+id/pesticide"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:layout_below="@id/seeds"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sprayers_title"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:layout_below="@id/pesticide"
+        android:text="Vinyunyuzi   "/>
+
+    <EditText
+        android:id="@+id/sprayers"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/pesticide"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:text="Mbolea(kilo)  "
+        android:layout_below="@id/sprayers"
+        android:id="@+id/fertilizers_title"/>
+
+    <EditText
+        android:id="@+id/fertilizers"
+        android:layout_width="150dp"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/sprayers"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cotton_title"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:layout_below="@id/fertilizers"
+        android:text="Pamba(kilo)     "/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cotton"
+        android:layout_below="@id/fertilizers"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:inputType="number"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:layout_below="@id/cotton"
+        android:id="@+id/comments_title"
+        android:text="Maoni  "/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/comments"
+        android:layout_below="@id/cotton"
+        android:layout_alignParentRight="true"
+        android:minLines="3"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/farmer_create_submit"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/comments"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="Create"
+        android:onClick=""
+        android:layout_marginBottom="32dp"/>
+
+
+</RelativeLayout>
+
+</ScrollView>

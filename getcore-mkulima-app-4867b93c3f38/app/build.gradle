@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.getcoregroup.mkulima"
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionCode 2
+        versionName "1.1.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.loopj.android:android-async-http:1.4.5'
+    compile 'com.github.satyan:sugar:1.3.1'
+    compile 'tk.zielony:carbon:0.7.0'
+    compile 'com.github.navasmdc:MaterialDesign:1.+@aar'
+    compile files('libs/picasso-2.3.3.jar')
+}

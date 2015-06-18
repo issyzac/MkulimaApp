@@ -1,0 +1,1 @@
+DELETE FROM Farmer WHERE id = 1;

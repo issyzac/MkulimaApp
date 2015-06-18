@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_wrap">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/farmer_dp"
+            android:src="@drawable/camera"/>
+
+        <Spinner
+            android:visibility="gone"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:id="@+id/sp_district"
+            android:layout_marginTop="16dp"
+            android:prompt="@string/district_prompt"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true">
+
+            </Spinner>
+
+        <Spinner
+            android:visibility="gone"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:id="@+id/sp_ward"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:prompt="@string/ward_prompt"
+            android:layout_below="@id/sp_district">
+
+        </Spinner>
+
+        <Spinner
+            android:visibility="gone"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:id="@+id/sp_village"
+            android:layout_marginTop="16dp"
+            android:prompt="@string/village_prompt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_below="@id/sp_ward">
+
+        </Spinner>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green_600"
+        android:layout_below="@+id/id_wrap"
+        android:id="@+id/title_frame">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/title_text"
+            android:textColor="@color/white"
+            android:text="BADILI TAARIFA ZA MKULIMA"/>
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_frame"
+        android:id="@+id/name_title"
+        android:text="Majina "
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="16dp"/>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/farmer_names"
+        android:hint="Majina Ya Mkulima"
+        android:layout_below="@id/title_frame"
+        android:textSize="18sp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/farming_details_wrap"
+        android:layout_below="@id/farmer_names">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_title"
+            android:textSize="18sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/id_number"
+            android:text="Simu       "/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/id_number"
+            android:inputType="phone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/acres_title"
+            android:textSize="18sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/phone"
+            android:text="Ekari       "/>
+
+        <EditText
+            android:id="@+id/acres"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/phone"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:inputType="numberSigned"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seeds_title"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:layout_below="@id/acres"
+            android:text="Mbegu(Kg)    "/>
+
+        <EditText
+            android:id="@+id/seeds"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/acres"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:id="@+id/pesticide_title"
+            android:layout_below="@id/seeds"
+            android:text="Dawa(Chupa) "/>
+
+        <EditText
+            android:id="@+id/pesticide"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:layout_below="@id/seeds"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sprayers_title"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:layout_below="@id/pesticide"
+            android:text="Vinyunyuzi "/>
+
+        <EditText
+            android:id="@+id/sprayers"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/pesticide"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="Mbolea(Kg) "
+            android:layout_below="@id/sprayers"
+            android:id="@+id/fertilizers_title"/>
+
+        <EditText
+            android:id="@+id/fertilizers"
+            android:layout_width="150dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/sprayers"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cotton_title"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:layout_below="@id/fertilizers"
+            android:text="Pamba (Kg)    "/>
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cotton"
+            android:layout_below="@id/fertilizers"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:inputType="number"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/update"
+        android:background="@color/green_600"
+        android:textColor="@color/green_600"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Update"
+        materialdesign:iconDrawable="@drawable/ic_action_done"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/farming_details_wrap"/>
+
+
+</RelativeLayout>
+
+   </ScrollView>

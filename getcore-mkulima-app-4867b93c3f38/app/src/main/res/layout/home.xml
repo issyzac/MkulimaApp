@@ -1,0 +1,60 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Home"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grid_cards_wrapper">
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/items_grid"
+            android:numColumns="2"
+            android:background="@color/white">
+
+        </GridView>
+
+    </RelativeLayout>
+
+    <carbon.widget.Button
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upload"
+        android:id="@+id/upload"
+        android:onClick="uploadFarmers"
+        android:layout_centerHorizontal="true"
+        android:background="#ff6d75ff"
+        android:layout_marginTop="10dp" />
+
+    <carbon.widget.Button
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Location"
+        android:id="@+id/btn_set_location"
+        android:onClick="setLocation"
+        android:layout_below="@+id/upload"
+        android:layout_centerHorizontal="true"
+        android:background="#ff6d75ff"
+        android:layout_marginTop="10dp" />
+
+    <com.gc.materialdesign.views.ProgressBarIndeterminate
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="35dp"
+        android:visibility="invisible"
+        android:id="@+id/progressBar">
+
+        </com.gc.materialdesign.views.ProgressBarIndeterminate>
+
+</RelativeLayout>

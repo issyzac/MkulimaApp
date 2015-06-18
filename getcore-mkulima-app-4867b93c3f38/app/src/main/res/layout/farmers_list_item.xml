@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gc.materialdesign.views.Card
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/farmers_list_item_wrapper"
+            android:layout_marginRight="4dp"
+            android:paddingBottom="8dp"
+            android:layout_marginLeft="4dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/farmer_image"
+                android:layout_marginTop="8dp"
+                android:background="@color/grey_100"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/card_grid_text"
+                android:id="@+id/farmer_names"
+                android:layout_toRightOf="@id/farmer_image"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:text="Full Names"/>
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/upload_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/done"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/card_grid_text"
+                android:id="@+id/farmer_village"
+                android:layout_toRightOf="@id/farmer_image"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/farmer_names"
+                android:text="Kata"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/card_grid_text"
+                android:layout_marginTop="8dp"
+                android:id="@+id/farmer_district"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/farmer_image"
+                android:layout_below="@id/farmer_village"
+                android:text="Kijiji"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/farmer_ward"
+                android:textColor="@color/card_grid_text"
+                android:layout_toRightOf="@id/farmer_image"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="32dp"
+                android:layout_below="@id/farmer_district"
+                android:text="Kitongoji"/>
+
+            </RelativeLayout>
+
+        </com.gc.materialdesign.views.Card>
+
+</RelativeLayout>
