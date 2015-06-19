@@ -103,5 +103,18 @@
             android:layout_marginTop="8dp"
             />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/location_save_button"
+            android:layout_below="@id/et_hamlet"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="OK"
+            android:textSize="24sp"
+            android:background="@drawable/button3"
+            android:textColor="@color/white"/>
+
     </RelativeLayout>
 </ScrollView>

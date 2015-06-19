@@ -20,7 +20,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gc.materialdesign.views.ProgressBarIndeterminate;
@@ -63,10 +65,16 @@ public class Home extends ActionBarActivity {
 
     SharedPreferences sharedPreferences;
 
+    public ImageView preLoader;
+
+    public static TextView progressDescription;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+
+        preLoader = (ImageView)findViewById(R.id.preloader);
 
         Log.d("pref", "Home here.... App Started");
 
@@ -74,6 +82,16 @@ public class Home extends ActionBarActivity {
                 MODE_PRIVATE);
         if (sharedPreferences.getBoolean("my_first_time", true)) {
             Log.d("pref", "app running for the first time");
+
+            preLoader.setVisibility(View.VISIBLE);
+
+            Location mLocation = new Location();
+            mLocation.district = "null";
+            mLocation.division = "null";
+            mLocation.ward = "null";
+            mLocation.village = "null";
+            mLocation.hamlet = "null";
+            mLocation.save();
 
             ArrayList<Farmer> FL = new ArrayList<Farmer>();
 
@@ -211,6 +229,8 @@ public class Home extends ActionBarActivity {
                 FL.get(i).save();
             }
 
+            preLoader.setVisibility(View.GONE);
+
             sharedPreferences.edit().putBoolean("my_first_time", false).apply();
         }
 
@@ -232,6 +252,9 @@ public class Home extends ActionBarActivity {
         location = (Button) findViewById(R.id.btn_set_location);
 
         progressBar = (ProgressBarIndeterminate) findViewById(R.id.progressBar);
+
+        progressDescription = (TextView)findViewById(R.id.upload_description);
+        progressDescription.setTypeface(Rosario_Regular);
 
 //        progress = new ProgressDialog(this);
 //        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -295,11 +318,15 @@ public class Home extends ActionBarActivity {
     }
     public static void uploadFarmers(Context mContext) {
 
+
+        progressBar.setVisibility(View.VISIBLE);
+
         final List<Farmer> farmers = Farmer.listAll(Farmer.class);
 
         for (int i = 0; i < farmers.size(); i++) {
             final Farmer farmer = farmers.get(i);
 
+            progressDescription.setText("Uploading : "+farmer.getPreview());
 
             if (farmer.sent) continue;
 
@@ -318,7 +345,7 @@ public class Home extends ActionBarActivity {
             try {
                 params.put("image", new File(farmer.image));
             } catch (FileNotFoundException e) {
-                Toast.makeText(mContext, "Image for " + farmer.getPreview() + " was not found", Toast.LENGTH_LONG).show();
+//                Toast.makeText(mContext, "Image for " + farmer.getPreview() + " was not found", Toast.LENGTH_LONG).show();
                 continue;
             }
 
@@ -375,8 +402,9 @@ public class Home extends ActionBarActivity {
         }
 
 
+//        Toast.makeText(mContext, "Uploading ......",Toast.LENGTH_LONG).show();
 
-        Toast.makeText(mContext, "Uploading ......",Toast.LENGTH_LONG).show();
+        progressBar.setVisibility(View.GONE);
 
     }
 
@@ -418,7 +446,7 @@ public class Home extends ActionBarActivity {
                                             village1,
                                             hamlet1);
 
-                            Toast.makeText(getApplicationContext(), "Bla's clicked" + address.getPreview(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Bla's clicked" + address.getDistrict(), Toast.LENGTH_SHORT).show();
 
 
                         }

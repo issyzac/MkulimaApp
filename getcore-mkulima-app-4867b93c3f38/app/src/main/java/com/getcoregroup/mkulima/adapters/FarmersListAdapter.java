@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.getcoregroup.mkulima.Home;
 import com.getcoregroup.mkulima.R;
 import com.getcoregroup.mkulima.models.Farmer;
+import com.getcoregroup.mkulima.models.Location;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -24,11 +25,14 @@ public class FarmersListAdapter extends BaseAdapter{
 
     public List<Farmer> mList;
 
+    public Location mLoc;
 
 
-    public FarmersListAdapter(List<Farmer> farmerList){
+
+    public FarmersListAdapter(List<Farmer> farmerList, Location mLocation){
 
         mList = farmerList;
+        mLoc = mLocation;
 
     }
 
@@ -70,12 +74,19 @@ public class FarmersListAdapter extends BaseAdapter{
         View uploadTag = (View)view.findViewById(R.id.upload_tag);
         TextView farmerName = (TextView) view.findViewById(R.id.farmer_names);
         farmerName.setTypeface(Home.Rosario_Regular);
+
         TextView farmerDistrict = (TextView) view.findViewById(R.id.farmer_district);
+        farmerDistrict.setText(mLoc.getWard());
         farmerDistrict.setTypeface(Home.Roboto_Medium);
+
         TextView farmerWard = (TextView) view.findViewById(R.id.farmer_ward);
+        farmerWard.setText(mLoc.getVillage());
         farmerWard.setTypeface(Home.Roboto_Medium);
+
         TextView farmerVillage = (TextView) view.findViewById(R.id.farmer_village);
+        farmerVillage.setText(mLoc.getHamlet());
         farmerVillage.setTypeface(Home.Roboto_Medium);
+
         farmerName.setText(mList.get(i).getPreview());
         if(farmerName.getText().toString().length()>6){
             uploadTag.setVisibility(View.GONE);

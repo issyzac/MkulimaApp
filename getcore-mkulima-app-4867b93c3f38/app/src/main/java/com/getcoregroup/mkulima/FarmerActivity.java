@@ -16,6 +16,7 @@ import android.widget.ListView;
 
 import com.getcoregroup.mkulima.adapters.FarmersListAdapter;
 import com.getcoregroup.mkulima.models.Farmer;
+import com.getcoregroup.mkulima.models.Location;
 import com.orm.query.Select;
 
 import java.util.ArrayList;
@@ -40,6 +41,12 @@ public class FarmerActivity  extends ActionBarActivity {
 
     public List<Farmer> FarmerList;
 
+    //List of all the Location instances stored in the phone database
+    public List<Location> mLocation;
+
+    //variable holding the current location that is going to be used throughout the activity
+    public Location mLoc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +55,8 @@ public class FarmerActivity  extends ActionBarActivity {
         listView = (ListView) findViewById(R.id.farmer_lv);
         initialFarmerList = Select.from(Farmer.class).list();
         FarmerList = Select.from(Farmer.class).list();
+        mLocation = Select.from(Location.class).list();
+        mLoc = mLocation.get(0);
 
         LayoutInflater inflater = LayoutInflater.from(this);
         listHeader = inflater.inflate(R.layout.list_header, null);
@@ -56,7 +65,7 @@ public class FarmerActivity  extends ActionBarActivity {
 
         farmerSearch = (EditText)listHeader.findViewById(R.id.farmer_search);
 
-        adapter = new FarmersListAdapter(FarmerList);
+        adapter = new FarmersListAdapter(FarmerList, mLoc);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

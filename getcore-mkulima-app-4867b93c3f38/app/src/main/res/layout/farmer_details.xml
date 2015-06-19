@@ -265,16 +265,15 @@
 
     </RelativeLayout>
 
-    <com.gc.materialdesign.views.ButtonRectangle
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/update"
-        android:background="@color/green_600"
-        android:textColor="@color/green_600"
+        android:background="@drawable/button3"
+        android:textColor="@color/white"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="Update"
-        materialdesign:iconDrawable="@drawable/ic_action_done"
         android:layout_alignParentRight="true"
         android:layout_marginRight="16dp"
         android:layout_below="@id/farming_details_wrap"/>

@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import com.gc.materialdesign.views.ButtonRectangle;
+
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -49,7 +51,7 @@ public class FarmerDetailsActivity extends ActionBarActivity {
 
     TextView phone_title,name_title, acres_title, seeds_title, pesticides_title, sprayer_title, fertilizer_title, cottons_title, title;
 
-    ButtonRectangle update;
+    Button update;
 
     String mPhone, mAcres, mSeeds, mPesticides, mSprayer, mFertilizer, mCotton, mName;
 
@@ -94,7 +96,7 @@ public class FarmerDetailsActivity extends ActionBarActivity {
         fertilizers = (EditText)findViewById(R.id.fertilizers);
         cottons = (EditText)findViewById(R.id.cotton);
 
-        update = (ButtonRectangle)findViewById(R.id.update);
+        update = (Button)findViewById(R.id.update);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

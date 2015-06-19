@@ -7,11 +7,11 @@ import com.orm.SugarRecord;
  */
 public class Location extends SugarRecord<Location> {
 
-    public String district = "";
-    public String division = "";
-    public String ward = "";
-    public String village = "";
-    public String hamlet = "";
+    public String district;
+    public String division;
+    public String ward;
+    public String village;
+    public String hamlet;
 
     public Location(){
 
@@ -25,13 +25,26 @@ public class Location extends SugarRecord<Location> {
         this.village = village;
         this.hamlet = hamlet;
 
-        this.save();
-
     }
 
+    /**
+     * Setters
+     */
+    public void setDistrict(String mDistrict){this.district = mDistrict;}
+    public void setDivision(String mDivision){this.division = mDivision;}
+    public void setWard(String mWard){this.ward = mWard;}
+    public void setVillage(String mVillage){this.village = mVillage;}
+    public void setHamlet(String mHamlet){this.hamlet = mHamlet;}
 
-    public String getPreview(){
 
-        return this.district;
-    }
+    /**
+     * Getters
+     */
+    public String getDistrict(){ return district;}
+    public String getDivision(){return division;}
+    public String getWard(){return ward;}
+    public String getVillage(){return village;}
+    public String getHamlet(){return hamlet;}
+
+
 }
